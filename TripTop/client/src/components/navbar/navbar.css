@@ -1,0 +1,39 @@
+.navbar{
+    height:55px;
+    background-color:rgb(61, 72, 100);
+    display:flex;
+    justify-content: center;
+}
+.navContainer{
+    width: 100%;
+    max-width: 1024px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.navButton{
+    margin-left: 20px;
+    border: none ;
+    padding: 5px 10px;
+    cursor: pointer;
+    color:rgba(14, 14, 16, 0.911);
+}
+.SignOut{
+    margin-left: 20x;
+    border: none ;
+    padding: 5px 10px;
+    cursor: pointer;
+    color:rgba(14, 15, 19, 0.911);
+}
+.name{
+    display:flex;
+    justify-content: right;
+    color: rgb(251, 250, 250);
+}
