@@ -65,7 +65,7 @@ import {
             type === "list" ? "headerContainer listMode" : "headerContainer"
           }
         >
-          <div className="headerList">
+          {/* <div className="headerList">
             <div className="headerListItem active">
               <FontAwesomeIcon icon={faBed} />
               <span>Stays</span>
@@ -86,7 +86,7 @@ import {
               <FontAwesomeIcon icon={faTaxi} />
               <span>Airport taxis</span>
             </div>
-          </div>
+          </div> */}
           {type !== "list" && (
             <>
               <h1 className="headerTitle">

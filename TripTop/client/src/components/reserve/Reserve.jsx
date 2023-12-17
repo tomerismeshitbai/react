@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading, error } = useFetch(`api/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(`/api/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
   const getDatesInRange = (startDate, endDate) => {
@@ -55,7 +55,7 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
+          const res = axios.put(`/api/rooms/availability/${roomId}`, {
             dates: alldates,
           });
           return res.data;
@@ -65,15 +65,19 @@ const Reserve = ({ setOpen, hotelId }) => {
       navigate("/");
     } catch (err) {}
   };
+
   return (
     <div className="reserve">
       <div className="rContainer">
+       
         <FontAwesomeIcon
           icon={faCircleXmark}
           className="rClose"
           onClick={() => setOpen(false)}
         />
         <span>Select your rooms:</span>
+
+
         {data.map((item) => (
           <div className="rItem" key={item._id}>
             <div className="rItemInfo">
@@ -85,6 +89,7 @@ const Reserve = ({ setOpen, hotelId }) => {
               <div className="rPrice">{item.price}</div>
             </div>
             <div className="rSelectRooms">
+
               {item.roomNumbers.map((roomNumber) => (
                 <div className="room">
                   <label>{roomNumber.number}</label>
@@ -96,9 +101,12 @@ const Reserve = ({ setOpen, hotelId }) => {
                   />
                 </div>
               ))}
+
             </div>
           </div>
         ))}
+
+
         <button onClick={handleClick} className="rButton">
           Reserve Now!
         </button>

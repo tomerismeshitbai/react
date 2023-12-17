@@ -12,6 +12,7 @@ import Flights from "./pages/flights/Flights";
 import CarRentals from "./pages/carrentals/CarRentals";
 import Taxis from "./pages/taxis/Taxis";
 import Attractions from "./pages/Attractions/Attractions";
+import Register from "./pages/register/Register";
 
 
 function App(){
@@ -22,6 +23,7 @@ function App(){
         <Route path="/hotels" element={<List/>}/>
         <Route path="/hotels/:id" element={<Hotel/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
         <Route path="/flights" element={<Flights/>} />
         <Route path="/attractions" element={<Attractions/>} />
         <Route path="/carrentals" element={<CarRentals/>} />

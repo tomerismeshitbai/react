@@ -12,6 +12,10 @@ const Navbar = () => {
     navigate("/login");
   };
 
+  const Register = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="navbar">
       <div className="navContainer">
@@ -20,7 +24,7 @@ const Navbar = () => {
         </Link>
         {user ? <div class="name">  {user.username} </div> : (
           <div className="navItems">
-            <button className="headerBtn" onClick={Login} >Register</button>
+            <button className="headerBtn" onClick={Register} >Register</button>
             <button className="headerBtn" onClick={Login} >Login</button>
           </div>
         )}

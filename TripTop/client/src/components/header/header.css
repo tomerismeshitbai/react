@@ -20,7 +20,7 @@
 .headerList {
     display: flex;
     gap: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .headerListItem {
@@ -61,7 +61,7 @@
 }
 
 .headerSearch {
-    height: 50px;
+    height: 36px;
     background-color: #fff;
     border: 3px solid rgb(230, 216, 94);
     display:flex;
@@ -73,7 +73,6 @@
     position: absolute;
     width: 100%;
     max-width: 1024px;
-    padding: 10px;
 }
 
 .headerIcon {

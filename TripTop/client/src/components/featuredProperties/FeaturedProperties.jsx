@@ -1,5 +1,6 @@
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
+import { Link } from "react-router-dom";
 
 const FeaturedProperties = () => {
   const { data, loading, error } = useFetch("http://localhost:8800/api/hotels?featured=true");
@@ -17,13 +18,18 @@ const FeaturedProperties = () => {
                 alt=""
                 className="fpImg"
               />
+             
               <span className="fpName">{item.name}</span>
+              <Link to={`/hotels/${item._id}`}> 
+                      <button className="siCheckButton">See availability</button>
+                </Link>
               <span className="fpCity">{item.city}</span>
               <span className="fpPrice">Starting from ${item.cheapestPrice}</span>
               {item.rating && <div className="fpRating">
                 <button>{item.rating}</button>
                 <span>Excellent</span>
               </div>}
+          
             </div>
           ))}
         </>

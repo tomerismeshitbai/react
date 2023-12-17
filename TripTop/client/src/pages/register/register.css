@@ -1,0 +1,33 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .rContainer {
+    width: 300px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  .rButton {
+    padding: 10px;
+    background-color: #4c82af;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .rButton:hover {
+    background-color: #4563a0;
+  }
+  

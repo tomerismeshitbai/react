@@ -6,7 +6,7 @@ const MailList = () => {
   const navigate = useNavigate();
 
   const Login = () => {
-    navigate("/login");
+    navigate("/register");
   };
   return (
     <div className="mail">
